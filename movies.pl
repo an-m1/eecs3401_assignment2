@@ -4,6 +4,7 @@
         director/2,
         actor/3,
         actress/3.
+
       
 
 movie(american_beauty, 1999).
@@ -2978,3 +2979,6 @@ actor(untitled_woody_allen_fall_project_2006, colin_salmon, '').
 movie(a_view_from_the_bridge, 2006).
 actress(a_view_from_the_bridge, scarlett_johansson, catherine).
 actor(a_view_from_the_bridge, anthony_lapaglia, eddie_carbone).
+
+% released_after rule
+released_after(M, Y) :- movie(M, Year), Year > Y.
